@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f2b4a" />
+  <title>About Us | Rockingham Plumbing Pros</title>
+  <meta name="description" content="Learn about Rockingham Plumbing Pros — a platform connecting customers to private plumbers in Rockingham, NC. Find plumbing services, repairs, installations and more." />
+  <link rel="canonical" href="https://rockinghamplumbingpros.com/about-us/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: "#0f2b4a", 800: "#1a3a5c", 700: "#234b6e" },
+            primary: { DEFAULT: "#1a5f8a", 600: "#1473a8", 500: "#1a8bc4" },
+            accent: { DEFAULT: "#d97706", dark: "#b45309", light: "#f59e0b" },
+            teal: { DEFAULT: "#0d9488", 500: "#14b8a6" }
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            display: ["Plus Jakarta Sans", "Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 10px 30px rgba(255,107,53,0.5); }
+      50% { box-shadow: 0 10px 45px rgba(255,107,53,0.85); }
+    }
+    .cta-pulse { animation: pulse-glow 2.5s ease-in-out infinite; }
+
+    .npser-wrap { max-width: 1180px; margin: 0 auto; width: 100%; }
+    .npser-section { padding: 80px 30px; font-family: 'Inter', sans-serif; }
+
+    .npser-h2 {
+      font-family: 'Poppins', sans-serif; font-size: 40px; font-weight: 700;
+      line-height: 1.25; letter-spacing: -0.6px; margin: 0 0 14px 0; position: relative;
+    }
+    .npser-h2:after {
+      content: ""; display: block; width: 60px; height: 4px;
+      background: #FF6B35; border-radius: 2px; margin-top: 14px;
+    }
+    .npser-h2-dark { color: #1A2B4A; }
+    .npser-h2-orange { color: #FF6B35; }
+    .npser-h2-orange:after { background: #FF6B35; }
+
+    .npser-h2-sub {
+      font-size: 26px !important; font-weight: 600 !important; color: #1A2B4A !important;
+      margin: 32px 0 10px 0 !important; padding-left: 16px; border-left: 5px solid #FF6B35;
+      line-height: 1.3; letter-spacing: -0.3px;
+    }
+    .npser-h2-sub:after { display: none !important; }
+
+    .npser-p {
+      font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.8;
+      margin: 0 0 16px 0; color: #334155; font-weight: 400;
+    }
+    .npser-p-light { color: #e2e8f0; }
+
+    .npser-list-check {
+      list-style: none; padding: 0; margin: 10px 0 20px;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 18px;
+    }
+    .npser-list-check li {
+      font-family: 'Inter', sans-serif; font-size: 15.5px; color: #334155;
+      padding: 14px 16px 14px 48px; position: relative; font-weight: 500;
+      background: #f8fafc; border-radius: 10px; border-left: 4px solid #FF6B35;
+      line-height: 1.5; transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .npser-list-check li:hover { transform: translateX(4px); box-shadow: 0 6px 16px rgba(26,43,74,0.06); }
+    .npser-list-check li:before {
+      content: "\2713"; position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+      color: #fff; font-weight: 700; font-size: 12px; width: 24px; height: 24px;
+      background: linear-gradient(135deg, #FF6B35 0%, #E85A28 100%); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(255,107,53,0.35);
+    }
+
+    .npser-btn {
+      display: inline-block; padding: 18px 42px; font-family: 'Poppins', sans-serif;
+      font-size: 18px; font-weight: 700; border-radius: 12px; text-decoration: none !important;
+      border-bottom: none !important; transition: all 0.3s ease; min-width: 260px;
+      text-align: center; line-height: 1.25; letter-spacing: 0.2px;
+    }
+    .npser-btn-primary {
+      background: linear-gradient(135deg, #FF6B35 0%, #E85A28 100%);
+      color: #ffffff !important; border: none; box-shadow: 0 8px 24px rgba(255,107,53,0.4);
+    }
+    .npser-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(255,107,53,0.55); color: #ffffff !important; }
+
+    .npser-disclaimer { background: #0d1b30; padding: 60px 30px; font-family: 'Inter', sans-serif; }
+    .npser-disc-h2 {
+      font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 600;
+      color: #FF6B35; margin: 0 0 20px 0; text-align: center;
+      position: relative; padding-bottom: 16px;
+    }
+    .npser-disc-h2:after {
+      content: ""; position: absolute; bottom: 0; left: 50%;
+      transform: translateX(-50%); width: 60px; height: 3px; background: #FF6B35; border-radius: 2px;
+    }
+    .npser-disc-p {
+      font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.8;
+      color: #a8b8c8; margin-bottom: 14px; text-align: center;
+    }
+
+    .page-hero {
+      position: relative; width: 100%; min-height: 400px; display: flex; align-items: center;
+      overflow: hidden; padding: 80px 30px; background: #1A2B4A;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1920&q=80');
+      background-size: cover; background-position: center; z-index: 1;
+    }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(10,20,40,0.94) 0%, rgba(15,30,56,0.88) 50%, rgba(15,30,56,0.6) 100%);
+      z-index: 2;
+    }
+    .page-hero-wrap {
+      position: relative; z-index: 3; max-width: 1180px; width: 100%;
+      margin: 0 auto; text-align: left; color: #ffffff;
+    }
+    .page-hero-wrap h1 {
+      font-family: 'Poppins', sans-serif; font-size: 3.2rem; font-weight: 800;
+      line-height: 1.15; margin-bottom: 18px; color: #fff;
+    }
+    .page-hero-wrap p {
+      font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.75;
+      color: #e2e8f0; margin: 0 0 28px 0; max-width: 760px;
+    }
+    .breadcrumb {
+      font-family: 'Inter', sans-serif; font-size: 14px; color: #a8b8c8;
+      margin-bottom: 20px;
+    }
+    .breadcrumb a { color: #FFC107; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 8px; color: #64748b; }
+
+    @media (max-width: 768px) {
+      .npser-section { padding: 60px 20px; }
+      .npser-h2 { font-size: 30px; }
+      .npser-h2-sub { font-size: 22px !important; }
+      .npser-list-check { grid-template-columns: 1fr; }
+      .npser-btn { width: 100%; padding: 15px 20px; font-size: 16px; min-width: 100%; }
+      .npser-disc-h2 { font-size: 22px; }
+      .npser-disc-p { font-size: 14px; }
+      .page-hero { min-height: auto !important; padding: 45px 18px 55px !important; }
+      .page-hero-wrap h1 { font-size: 2rem !important; line-height: 1.2 !important; }
+      .page-hero-wrap p { font-size: 15px !important; line-height: 1.7 !important; }
+    }
+
+    @media (max-width: 400px) {
+      .page-hero-wrap h1 { font-size: 1.75rem !important; }
+      .npser-h2 { font-size: 23px !important; }
+      .npser-h2-sub { font-size: 18px !important; }
+      .npser-p { font-size: 15px !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 antialiased">
+
+<!-- ================= TOP BAR ================= -->
+<div class="hidden md:block bg-navy text-slate-200 text-sm">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between py-2">
+    <div class="flex items-center gap-5">
+      <span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span> 24/7 Emergency Connection</span>
+      <span class="text-slate-400">|</span>
+      <span class="inline-flex items-center gap-2">
+        <svg class="w-4 h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 4a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V4z"/></svg>
+        Mon–Sat 7am–7pm
+      </span>
+    </div>
+    <div class="flex items-center gap-5">
+      <span class="inline-flex items-center gap-1.5 text-amber-300">★★★★★ <span class="text-slate-300">Trusted Local Service</span></span>
+      <span class="text-slate-400">|</span>
+      <span class="text-slate-300">Licensed &amp; Insured Professionals</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-100 shadow-sm">
+  <nav class="max-w-7xl mx-auto px-4 flex items-center justify-between h-[68px]">
+    <a href="/" class="flex items-center gap-2.5 shrink-0">
+      <span class="grid place-items-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-teal text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c3.5 4.2 6 7.2 6 10.2A6 6 0 016 13.2C6 10.2 8.5 7.2 12 3z"/></svg>
+      </span>
+      <span class="leading-tight">
+        <span class="block font-display font-extrabold text-navy text-base sm:text-lg">Rockingham Plumbing Pros</span>
+        <span class="block text-[11px] tracking-wide text-slate-500 -mt-0.5">Rockingham, NC</span>
+      </span>
+    </a>
+    <ul class="hidden lg:flex items-center gap-1 text-[15px] font-medium text-slate-700">
+      <li><a class="px-3 py-2 rounded-lg hover:text-primary hover:bg-slate-50" href="/">Home</a></li>
+      <li><a class="px-3 py-2 rounded-lg hover:text-primary hover:bg-slate-50" href="/services/">Services</a></li>
+      <li><a class="px-3 py-2 rounded-lg hover:text-primary hover:bg-slate-50" href="/locations/">Locations</a></li>
+      <li><a class="px-3 py-2 rounded-lg text-primary bg-slate-50 font-semibold" href="/about-us/">About Us</a></li>
+      <li><a class="px-3 py-2 rounded-lg hover:text-primary hover:bg-slate-50" href="/testimonials/">Testimonials</a></li>
+      <li><a class="px-3 py-2 rounded-lg hover:text-primary hover:bg-slate-50" href="/blog/">Blog</a></li>
+      <li><a class="px-3 py-2 rounded-lg hover:text-primary hover:bg-slate-50" href="/contact-us/">Contact Us</a></li>
+    </ul>
+    <div class="flex items-center gap-2">
+      <a href="tel:+10000000000" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2.5 shadow-sm">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 4a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V4z"/></svg>
+        Call Now to Talk to a Specialist
+      </a>
+      <button data-nav-toggle aria-expanded="false" aria-label="Open menu" class="lg:hidden grid place-items-center w-11 h-11 rounded-xl ring-1 ring-slate-200 text-navy">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div data-mobile-nav class="hidden lg:hidden border-t border-slate-100 bg-white">
+    <div class="px-4 py-3 space-y-1">
+      <a class="block px-3 py-2.5 rounded-lg hover:bg-slate-50 font-medium" href="/">Home</a>
+      <a class="block px-3 py-2.5 rounded-lg hover:bg-slate-50 font-medium" href="/services/">Services</a>
+      <a class="block px-3 py-2.5 rounded-lg hover:bg-slate-50 font-medium" href="/locations/">Locations</a>
+      <a class="block px-3 py-2.5 rounded-lg bg-slate-50 text-primary font-semibold" href="/about-us/">About Us</a>
+      <a class="block px-3 py-2.5 rounded-lg hover:bg-slate-50 font-medium" href="/testimonials/">Testimonials</a>
+      <a class="block px-3 py-2.5 rounded-lg hover:bg-slate-50 font-medium" href="/blog/">Blog</a>
+      <a class="block px-3 py-2.5 rounded-lg hover:bg-slate-50 font-medium" href="/contact-us/">Contact Us</a>
+      <a href="tel:+10000000000" class="mt-2 flex items-center justify-center gap-2 rounded-xl bg-accent text-white font-semibold px-4 py-3">Call Now to Talk to a Specialist</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ PAGE HERO ============ -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-wrap">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>/</span>About Us
+    </div>
+    <h1>About Rockingham Plumbing Pros</h1>
+    <p>We are a platform to help connect customers to private Plumbers in Rockingham, NC.</p>
+    <a href="tel:+10000000000" class="npser-btn npser-btn-primary cta-pulse">📞 Call Now to Talk to a Specialist</a>
+  </div>
+</div>
+
+<!-- ============ WHAT WE DO ============ -->
+<section class="npser-section" style="background:#F8F9FA;">
+  <div class="npser-wrap">
+    <h2 class="npser-h2 npser-h2-dark">What we do</h2>
+    <p class="npser-p">We are a platform to help connect customers to private Plumbers in Rockingham, NC.</p>
+    <p class="npser-p">We aim to make it easy for customers to connect to providers in order to repair, install, replace, maintain or get assistance with their plumbing. This means that people can easily view the services available and connect with private Plumbers.</p>
+  </div>
+</section>
+
+<!-- ============ CONNECTING CUSTOMERS ============ -->
+<section class="npser-section" style="background:#ffffff;">
+  <div class="npser-wrap">
+    <h2 class="npser-h2 npser-h2-dark">Connecting customers to plumbers</h2>
+    <p class="npser-p">It can be difficult to find the right plumber to assist you with your plumbing needs. It aims to make it easier for customers to connect with private providers, depending on availability and their service requirements.</p>
+    <p class="npser-p">Whether you need advice/assistance with a water heater, repairs, blockages, pipework or any other plumbing related work, this platform can help connect you to potential providers within Rockingham.</p>
+  </div>
+</section>
+
+<!-- ============ MID CTA ============ -->
+<section class="npser-section" style="background:linear-gradient(135deg,#1A2B4A 0%,#2d4a7c 100%); padding:60px 30px;">
+  <div class="npser-wrap" style="text-align:center;">
+    <h3 style="font-family:'Poppins',sans-serif;font-size:32px;font-weight:700;color:#fff;margin-bottom:12px;">Need a Plumber in Rockingham?</h3>
+    <p style="font-family:'Inter',sans-serif;font-size:18px;color:#e2e8f0;max-width:700px;margin:0 auto 24px auto;">Get connected with a local plumbing specialist today.</p>
+    <a href="tel:+10000000000" class="npser-btn npser-btn-primary cta-pulse">📞 Call Now to Talk to a Specialist</a>
+  </div>
+</section>
+
+<!-- ============ HOW WE WORK ============ -->
+<section class="npser-section" style="background:#F8F9FA;">
+  <div class="npser-wrap">
+    <h2 class="npser-h2 npser-h2-dark">How we work</h2>
+    <p class="npser-p">We believe it is important that customers have clear information. We aim to:</p>
+    <ul class="npser-list-check">
+      <li>Make it easy to connect customers to private plumbing service providers.</li>
+      <li>Provide relevant information to customers seeking plumbing assistance in Rockingham, NC.</li>
+      <li>Provide ease of searching for available plumbing services.</li>
+      <li>Be clear on our role in connecting customers to leads.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PRIVATE PROVIDERS ============ -->
+<section class="npser-section" style="background:#ffffff;">
+  <div class="npser-wrap">
+    <h2 class="npser-h2 npser-h2-dark">Private Plumbing Service Providers</h2>
+    <p class="npser-p">Rockingham Plumbing Pros is not a plumbing contractor, but a lead generation service.</p>
+    <p class="npser-p">If customers get in touch via this platform, they may be connected to a private plumber, depending upon availability. The plumbers are private and will provide their services.</p>
+    <p class="npser-p">Before moving forward, customers should get in contact with the service provider directly to confirm that they have the appropriate qualifications, insurance, cost, and quality of service, guarantees, availability and any other information.</p>
+  </div>
+</section>
+
+<!-- ============ MID CTA 2 ============ -->
+<section class="npser-section" style="background:linear-gradient(135deg,#1A2B4A 0%,#2d4a7c 100%); padding:60px 30px;">
+  <div class="npser-wrap" style="text-align:center;">
+    <h3 style="font-family:'Poppins',sans-serif;font-size:32px;font-weight:700;color:#fff;margin-bottom:12px;">Looking for Plumbing Services?</h3>
+    <p style="font-family:'Inter',sans-serif;font-size:18px;color:#e2e8f0;max-width:700px;margin:0 auto 24px auto;">Speak with a specialist about your plumbing needs in Rockingham, NC.</p>
+    <a href="tel:+10000000000" class="npser-btn npser-btn-primary cta-pulse">📞 Call Now to Talk to a Specialist</a>
+  </div>
+</section>
+
+<!-- ============ WHO WE SERVE ============ -->
+<section class="npser-section" style="background:#F8F9FA;">
+  <div class="npser-wrap">
+    <h2 class="npser-h2 npser-h2-dark">Who we serve</h2>
+    <p class="npser-p">We aim to help people in Rockingham, NC (and surrounding areas) find plumbing assistance. This platform makes it easy for local customers to search for plumbing services and connect to potential private service providers.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT US ============ -->
+<section class="npser-section" style="background:#ffffff;">
+  <div class="npser-wrap">
+    <h2 class="npser-h2 npser-h2-dark">Contact us</h2>
+    <p class="npser-p">Thank you for visiting Rockingham Plumbing Pros. We appreciate you taking an interest in our site and what we aim to do to connect customers with private plumbing service providers.</p>
+    <p class="npser-p">If you have any queries about our site or the process we have in place to connect customers, please get in contact using out Contact Us page.</p>
+    <p class="npser-p"><strong>Rockingham Plumbing Pros</strong><br>Rockingham, NC</p>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="npser-section" style="background:linear-gradient(135deg,#0F1E38 0%,#1A2B4A 100%);">
+  <div class="npser-wrap">
+    <h2 class="npser-h2 npser-h2-orange" style="text-align:center;">Connect With a Plumber in Rockingham, NC</h2>
+    <p class="npser-p npser-p-light" style="text-align:center;max-width:800px;margin:0 auto 20px auto;">Whether you need help with a water heater, repairs, blockages, pipework or any other plumbing related work, we can help connect you to potential providers within Rockingham.</p>
+    <div style="text-align:center;">
+      <a href="tel:+10000000000" class="npser-btn npser-btn-primary cta-pulse">📞 Call Now to Talk to a Specialist</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-navy text-slate-300 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2.5">
+        <span class="grid place-items-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-teal text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c3.5 4.2 6 7.2 6 10.2A6 6 0 016 13.2C6 10.2 8.5 7.2 12 3z"/></svg>
+        </span>
+        <span class="font-display font-extrabold text-white text-lg">Rockingham Plumbing Pros</span>
+      </div>
+      <p class="mt-4 text-sm text-slate-400">Your trusted connection to professional plumbing services in Rockingham, NC and surrounding areas.</p>
+      <p class="mt-4 text-sm"><span class="text-amber-300">★★★★★</span> Trusted Local Service</p>
+    </div>
+    <div>
+      <h3 class="font-display font-bold text-white text-lg">Services</h3>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a class="hover:text-teal-400" href="/services/drain-cleaning-rockingham-nc/">Drain Cleaning</a></li>
+        <li><a class="hover:text-teal-400" href="/services/sewer-line-repair-rockingham-nc/">Sewer Line Repair</a></li>
+        <li><a class="hover:text-teal-400" href="/services/leak-detection-rockingham-nc/">Leak Detection</a></li>
+        <li><a class="hover:text-teal-400" href="/services/pipe-repair-rockingham-nc/">Pipe Repair</a></li>
+        <li><a class="hover:text-teal-400" href="/services/water-heater-repair-rockingham-nc/">Water Heater Repair</a></li>
+        <li><a class="hover:text-teal-400" href="/services/">View All Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-display font-bold text-white text-lg">Quick Links</h3>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a class="hover:text-teal-400" href="/">Home</a></li>
+        <li><a class="hover:text-teal-400" href="/locations/">Locations</a></li>
+        <li><a class="hover:text-teal-400" href="/about-us/">About Us</a></li>
+        <li><a class="hover:text-teal-400" href="/testimonials/">Testimonials</a></li>
+        <li><a class="hover:text-teal-400" href="/blog/">Blog</a></li>
+        <li><a class="hover:text-teal-400" href="/contact-us/">Contact Us</a></li>
+        <li><a class="hover:text-teal-400" href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a class="hover:text-teal-400" href="/disclaimer/">Disclaimer</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-display font-bold text-white text-lg">Get In Touch</h3>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 4a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V4z"/></svg>
+          <a class="hover:text-teal-400 font-semibold text-white" href="tel:+10000000000">Call Now to Talk to a Specialist</a>
+        </li>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          <span>Rockingham, NC</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-teal-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 6v6l4 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Mon–Sat 7am–7pm • 24/7 Emergency</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+      <p>© <span id="year">2026</span> RockinghamPlumbingPros.com. All rights reserved.</p>
+      <nav class="flex items-center gap-4" aria-label="Footer">
+        <a class="hover:text-teal-400" href="/services/">Services</a>
+        <a class="hover:text-teal-400" href="/locations/">Locations</a>
+        <a class="hover:text-teal-400" href="/privacy-policy/">Privacy Policy</a>
+        <a class="hover:text-teal-400" href="/disclaimer/">Disclaimer</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ DISCLAIMER SECTION ============ -->
+<div class="npser-disclaimer">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 class="npser-disc-h2">Disclaimer</h2>
+    <p class="npser-disc-p">This website is a lead generation and customer connection service. We are not the plumbing contractor and do not directly perform plumbing work.</p>
+    <p class="npser-disc-p">Customers may be connected with independent service providers based on availability. All services are performed by independent, licensed, and insured plumbing professionals.</p>
+    <p class="npser-disc-p">Services, pricing, licensing, insurance, warranties, guarantees, qualifications, repair methods, scheduling, and availability vary by provider. We do not guarantee any specific outcome or result.</p>
+    <p class="npser-disc-p">Customers should confirm all service details directly with the independent professional before scheduling or purchasing any service. Any reliance on information provided on this website is at your own risk.</p>
+  </div>
+</div>
+
+<!-- ================= STICKY MOBILE CALL BAR ================= -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-slate-200 shadow-[0_-6px_20px_-10px_rgba(0,0,0,0.25)]">
+  <a href="tel:+10000000000" class="flex items-center justify-center gap-2 py-3.5 font-semibold text-white bg-accent">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 4a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V4z"/></svg>
+    Call Now to Talk to a Specialist
+  </a>
+</div>
+
+<script>
+  const navToggle = document.querySelector('[data-nav-toggle]');
+  const mobileNav = document.querySelector('[data-mobile-nav]');
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener('click', function() {
+      mobileNav.classList.toggle('hidden');
+      this.setAttribute('aria-expanded', !mobileNav.classList.contains('hidden'));
+    });
+  }
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
