@@ -256,9 +256,36 @@
       .hp-review-stars { font-size: 13px !important; }
       .hp-review-text { font-size: 11.5px !important; }
 
-      .npser-section > div[style*="grid-template-columns: repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
-      .npser-section > div[style*="grid-template-columns: repeat(4"] > div { border-right: none !important; border-bottom: 1px solid #e6ecf3 !important; padding: 22px 12px !important; }
-      .npser-section > div[style*="grid-template-columns: repeat(4"] > div:nth-child(odd) { border-right: 1px solid #e6ecf3 !important; }
+         /* Trust bar responsive */
+      .trust-section { background:#ffffff; padding:0; border-bottom:1px solid #e6ecf3; }
+      .trust-grid {
+        max-width: 1240px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .trust-item {
+        padding: 34px 18px;
+        text-align: center;
+        border-right: 1px solid #e6ecf3;
+      }
+      .trust-item:last-child { border-right: none; }
+      .trust-icon { font-size: 26px; margin-bottom: 10px; }
+      .trust-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #1A2B4A;
+      }
+      .trust-sub { font-size: 15px; color: #64748b; font-weight: 500; }
+
+      /* Services grid responsive */
+      .svc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 26px;
+        margin-top: 36px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -272,6 +299,55 @@
       .npser-h2 { font-size: 23px !important; }
       .npser-h2-sub { font-size: 18px !important; }
       .npser-p { font-size: 15px !important; }
+    }
+
+        /* ============ MOBILE FIXES (NEW) ============ */
+    @media (max-width: 768px) {
+      body { padding-bottom: 64px; }
+
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .trust-item:nth-child(1),
+      .trust-item:nth-child(2) {
+        border-bottom: 1px solid #e6ecf3;
+      }
+      .trust-item:nth-child(2),
+      .trust-item:nth-child(4) {
+        border-right: none;
+      }
+      .trust-item { padding: 22px 12px; }
+      .trust-title { font-size: 22px; }
+
+      .svc-grid { grid-template-columns: 1fr; gap: 18px; }
+
+      .hp-hero-wrap h1 br { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .svc-card { padding: 24px 20px; }
+      .npser-faq-item { padding: 20px 18px; }
+      .npser-faq-h2 { padding-left: 34px; font-size: 16px; }
+      .npser-btn { font-size: 15px; padding: 14px 16px; }
+      .npser-list-check li {
+        padding: 12px 12px 12px 42px;
+        font-size: 14.5px;
+      }
+      .npser-list-check li:before {
+        left: 10px;
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+      }
+      .trust-title { font-size: 20px; }
+      .trust-sub { font-size: 13px; }
+    }
+
+    @media (max-width: 400px) {
+      .npser-btn { font-size: 13px; padding: 13px 14px; }
+      .hp-call-btn span:nth-child(2) { font-size: 13px; }
+      .hp-hero-wrap h1 { font-size: 1.6rem !important; }
+      .npser-h2 { font-size: 22px !important; }
+      .npser-h2-sub { font-size: 17px !important; }
+      .npser-p { font-size: 14.5px !important; }
     }
   </style>
 </head>
@@ -412,28 +488,27 @@
   </div>
 </div>
 
-<!-- ============ TRUST BAR ============ -->
-<section class="npser-section" style="background:#ffffff; padding:0; border-bottom:1px solid #e6ecf3;">
-  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);">
-    <div style="padding:34px 18px;text-align:center;border-right:1px solid #e6ecf3;">
-      <div style="font-size:26px;margin-bottom:10px;">⚡</div>
-      <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#1A2B4A;">Fast</div>
-      <div style="font-size:15px;color:#64748b;font-weight:500;">Call Connection</div>
+<section class="npser-section trust-section">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-icon">⚡</div>
+      <div class="trust-title">Fast</div>
+      <div class="trust-sub">Call Connection</div>
     </div>
-    <div style="padding:34px 18px;text-align:center;border-right:1px solid #e6ecf3;">
-      <div style="font-size:26px;margin-bottom:10px;">🤝</div>
-      <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#1A2B4A;">Friendly</div>
-      <div style="font-size:15px;color:#64748b;font-weight:500;">Customer Support</div>
+    <div class="trust-item">
+      <div class="trust-icon">🤝</div>
+      <div class="trust-title">Friendly</div>
+      <div class="trust-sub">Customer Support</div>
     </div>
-    <div style="padding:34px 18px;text-align:center;border-right:1px solid #e6ecf3;">
-      <div style="font-size:26px;margin-bottom:10px;">📍</div>
-      <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#1A2B4A;">Local</div>
-      <div style="font-size:15px;color:#64748b;font-weight:500;">Serving Rockingham, NC</div>
+    <div class="trust-item">
+      <div class="trust-icon">📍</div>
+      <div class="trust-title">Local</div>
+      <div class="trust-sub">Serving Rockingham, NC</div>
     </div>
-    <div style="padding:34px 18px;text-align:center;">
-      <div style="font-size:26px;margin-bottom:10px;">✨</div>
-      <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#1A2B4A;">Simple</div>
-      <div style="font-size:15px;color:#64748b;font-weight:500;">Process</div>
+    <div class="trust-item">
+      <div class="trust-icon">✨</div>
+      <div class="trust-title">Simple</div>
+      <div class="trust-sub">Process</div>
     </div>
   </div>
 </section>
@@ -461,7 +536,7 @@
     <h2 class="npser-h2 npser-h2-dark">Our Plumbing Services in Rockingham, NC</h2>
     <p class="npser-p">From emergency repairs to routine maintenance, here are the plumbing services we connect you with across Rockingham, NC. Choose a service below to learn more.</p>
 
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:26px; margin-top:36px;">
+    <div class="svc-grid">
 
       <div class="svc-card">
         <h3 class="svc-title">Drain Cleaning Rockingham NC</h3>
